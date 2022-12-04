@@ -17,7 +17,7 @@ namespace Csharp_OOP_Agenzia_Immobiliare
             }
         //------------------------------------------- Metodi Get -------------------------------------------
 
-        public int ggetPostiAuto()
+        public int getPostiAuto()
             {
             return this.postiAuto;
             }
@@ -26,6 +26,18 @@ namespace Csharp_OOP_Agenzia_Immobiliare
         public void setPostiAuto()
             {
             this.postiAuto = postiAuto;
+            }
+
+        //------------------------- Metodo Stampa Immobile -------------------------
+
+        public virtual void stampaImmobile()
+            {
+            Console.WriteLine("---------" + base.getIndirizzo() + "---------" + "\n");
+            Console.WriteLine("Codice Immobile : " + base.getCodiceImmobile());
+            Console.WriteLine("CAP: " + base.getCap());
+            Console.WriteLine("Città: " + base.getCittà());
+            Console.WriteLine("Metratura: " + base.getMetriQuadri() + "m2");
+            Console.WriteLine("Numero posti auto: " + this.getPostiAuto());
             }
         }
     }

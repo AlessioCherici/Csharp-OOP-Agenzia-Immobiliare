@@ -31,7 +31,7 @@ namespace Csharp_OOP_Agenzia_Immobiliare
             return this.bagni;
             }
 
-        public int getMetriQuadri()
+        public int getGiardino()
             {
             return this.metriQuadriGiardino;
             }
@@ -50,6 +50,20 @@ namespace Csharp_OOP_Agenzia_Immobiliare
         public void setGiardino()
             {
             this.metriQuadriGiardino = metriQuadriGiardino;
+            }
+
+        //------------------------- Metodo Stampa Immobile -------------------------
+
+        public virtual void stampaImmobile()
+            {
+            Console.WriteLine("---------" + base.getIndirizzo() + "---------" + "\n");
+            Console.WriteLine("Codice Immobile : " + base.getCodiceImmobile());
+            Console.WriteLine("CAP: " + base.getCap());
+            Console.WriteLine("Città: " + base.getCittà());
+            Console.WriteLine("Numero stanze: " + this.getStanze());
+            Console.WriteLine("Numero bagni: " + this.getBagni());
+            Console.WriteLine("Metratura: " + base.getMetriQuadri() + "m2");
+            Console.WriteLine("Metratura giardino: " + this.getGiardino());
             }
         }
     }

@@ -22,5 +22,20 @@ namespace Csharp_OOP_Agenzia_Immobiliare
             this.città = città;
             this.metriQuadri = metriQuadri;
             }
+
+        //------------------------- Metodi Get -------------------------
+
+
+
+        //------------------------- Metodo Stampa Immobile -------------------------
+
+        public virtual void stampaImmobile()
+            {
+            Console.WriteLine("---------" + this.indirizzo + "---------" + "\n");
+            Console.WriteLine("Codice Immobile : " + this.codiceImmobile);
+            Console.WriteLine("CAP: " + this.cap);
+            Console.WriteLine("Città: " + this.città);
+            Console.WriteLine("Metratura: " + this.metriQuadri + "m2");
+            }
         }
     }
