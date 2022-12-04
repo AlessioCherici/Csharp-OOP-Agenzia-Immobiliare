@@ -11,9 +11,33 @@ namespace Csharp_OOP_Agenzia_Immobiliare
         private int stanze;
         private int bagni;
 
-        public Appartamento(int stanze, int bagni) : base (string codiceImmobile, string indirizzo, string cap, string città, int metriQuadri)
+        public Appartamento(string codiceImmobile, string indirizzo, string cap, string città, int metriQuadri,int stanze, int bagni) 
+            : base (codiceImmobile, indirizzo, cap, città, metriQuadri)
             {
             this.stanze = stanze;
+            this.bagni = bagni;
+            }
+
+        //------------------------------------------- Metodi Get -------------------------------------------
+
+        public int getStanze()
+            {
+            return this.stanze;
+            }
+
+        public int getBagni()
+            {
+            return this.bagni;
+            }
+
+        //------------------------------------------- Metodi Set -------------------------------------------
+        public void setStanze()
+            {
+            this.stanze = stanze;
+            }
+
+        public void setBagni()
+            {
             this.bagni = bagni;
             }
         }
